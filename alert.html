@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job guard-alert</title>
+    <link rel="stylesheet" href="alert.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="nav">
+        <!-- Left -->
+        <a class="brand" href="#">
+          <img
+            src="https://i.postimg.cc/3W5Sx51Y/logo.jpg"
+            alt="JobGuard Logo"
+          />
+        </a>
+
+        <!-- Center -->
+        <nav class="nav-center" aria-label="Primary">
+          <a href="homepage.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="alert.html">Insight</a>
+        </nav>
+
+        <!-- Right -->
+        <div class="nav-right">
+          <a href="check-job.html" class="btn btn-outline">Check Job</a>
+          <a href="signup.html" class="btn btn-solid">Sign Up</a>
+        </div>
+
+        <!-- Mobile toggle -->
+        <input type="checkbox" id="menu" />
+        <label class="hamburger" for="menu" aria-label="Open menu">
+          <i></i>
+        </label>
+
+        <!-- Mobile dropdown -->
+        <div class="mobile-panel">
+          <div class="mobile-box">
+            <div class="mobile-links">
+              <a href="#">Home</a>
+              <a href="#">About Us</a>
+              <a href="#">Insight</a>
+            </div>
+
+            <div class="mobile-actions">
+               <a href="check-job.html" class="btn btn-outline">Check Job</a>
+          
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- alert section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-badge">
+          <span class="badge-ic">↻</span>
+          <span>Real Time Insights</span>
+        </div>
+
+        <h1>Job Scam Insights &amp; Analytics</h1>
+
+        <p>
+          Stay informed with real-time trends, alerts, and educational resources
+          to protect yourself from job scams.
+        </p>
+      </div>
+    </section>
+
+    <main class="main">
+      <div class="container">
+        <div class="tabs-wrap">
+          <div class="tabs" id="tabs">
+            <a class="tab" href="trends.html" data-tab="trends">
+              <span class="tab-ic">▦</span>
+              <span>Trends</span>
+            </a>
+
+            <a class="tab active" href="alert.html" data-tab="alerts">
+              <span class="tab-ic">!</span>
+              <span>Alerts</span>
+            </a>
+
+            <a class="tab" href="learn.html" data-tab="learn">
+              <span class="tab-ic">📘</span>
+              <span>Learn</span>
+            </a>
+          </div>
+        </div>
+        <section class="panel">
+          <div class="panel-top">
+            <div class="panel-title">
+              <span class="warn-box">!</span>
+              <span>Scam Type Distribution</span>
+            </div>
+
+            <span class="priority">2 High Priority</span>
+          </div>
+
+          <div class="alert-list">
+            <div class="alert-card">
+              <div class="alert-head">
+                <div>
+                  <div class="chips">
+                    <span class="chip high">High Risk</span>
+                    <span class="chip type">Phishing</span>
+                  </div>
+                  <div class="alert-title">Fake Remote Developer Position</div>
+                  <div class="alert-desc">
+                    Job posting requesting personal banking information during
+                    initial application. No legitimate company website found.
+                  </div>
+
+                  <div class="meta-row">
+                    <div class="meta-item">
+                      <span class="mini-ic">🏢</span
+                      ><span>TechCorp Solutions (Unverified)</span>
+                    </div>
+                    <div class="meta-item">
+                      <span class="mini-ic">📍</span><span>Remote</span>
+                    </div>
+                    <div class="meta-item">
+                      <span class="mini-ic">⏱</span><span>2 hours ago</span>
+                    </div>
+                  </div>
+                </div>
+
+                <a class="view" href="#">
+                  <span>View Details</span>
+                  <span class="ext">↗</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="alert-card">
+              <div class="alert-head">
+                <div>
+                  <div class="chips">
+                    <span class="chip high">High Risk</span>
+                    <span class="chip type">Advance Fee</span>
+                  </div>
+                  <div class="alert-title">Suspicious Data Entry Job</div>
+                  <div class="alert-desc">
+                    Position requires upfront payment for “training materials”.
+                    Classic advance-fee scam indicator.
+                  </div>
+
+                  <div class="meta-row">
+                    <div class="meta-item">
+                      <span class="mini-ic">🏢</span
+                      ><span>Global Services LLC</span>
+                    </div>
+                    <div class="meta-item">
+                      <span class="mini-ic">📍</span><span>Work from home</span>
+                    </div>
+                    <div class="meta-item">
+                      <span class="mini-ic">⏱</span><span>4 hours ago</span>
+                    </div>
+                  </div>
+                </div>
+
+                <a class="view" href="#">
+                  <span>View Details</span>
+                  <span class="ext">↗</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="alert-card">
+              <div class="alert-head">
+                <div>
+                  <div class="chips">
+                    <span class="chip medium">Medium Risk</span>
+                    <span class="chip type">Impersonation</span>
+                  </div>
+                  <div class="alert-title">Fake HR Recruiter Impersonation</div>
+                  <div class="alert-desc">
+                    Recruiter using non-corporate email domain while claiming to
+                    represent Amazon. Verify through official channels.
+                  </div>
+
+                  <div class="meta-row">
+                    <div class="meta-item">
+                      <span class="mini-ic">🏢</span
+                      ><span>Impersonating: Amazon</span>
+                    </div>
+                    <div class="meta-item">
+                      <span class="mini-ic">📍</span><span>Seattle, WA</span>
+                    </div>
+                    <div class="meta-item">
+                      <span class="mini-ic">⏱</span><span>1 day ago</span>
+                    </div>
+                  </div>
+                </div>
+
+                <a class="view" href="#">
+                  <span>View Details</span>
+                  <span class="ext">↗</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="alert-card">
+              <div class="alert-head">
+                <div>
+                  <div class="chips">
+                    <span class="chip medium">Medium Risk</span>
+                    <span class="chip type">MLM Scheme</span>
+                  </div>
+                  <div class="alert-title">MLM Disguised as Sales Role</div>
+                  <div class="alert-desc">
+                    Position emphasizes recruitment over actual sales.
+                    Compensation structure shows MLM characteristics.
+                  </div>
+
+                  <div class="meta-row">
+                    <div class="meta-item">
+                      <span class="mini-ic">🏢</span
+                      ><span>Wealth Builders Inc</span>
+                    </div>
+                    <div class="meta-item">
+                      <span class="mini-ic">📍</span
+                      ><span>Multiple Locations</span>
+                    </div>
+                    <div class="meta-item">
+                      <span class="mini-ic">⏱</span><span>1 day ago</span>
+                    </div>
+                  </div>
+                </div>
+                <a class="view" href="#">
+                  <span>View Details</span>
+                  <span class="ext">↗</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="alert-card">
+              <div class="alert-head">
+                <div>
+                  <div class="chips">
+                    <span class="chip low">Low Risk</span>
+                    <span class="chip type">Data Harvesting</span>
+                  </div>
+                  <div class="alert-title">Data Harvesting Survey Job</div>
+                  <div class="alert-desc">
+                    Job collects excessive personal information unrelated to the
+                    role. Possible identity theft attempt.
+                  </div>
+
+                  <div class="meta-row">
+                    <div class="meta-item">
+                      <span class="mini-ic">🏢</span
+                      ><span>Market Research Pro</span>
+                    </div>
+                    <div class="meta-item">
+                      <span class="mini-ic">📍</span><span>Remote</span>
+                    </div>
+                    <div class="meta-item">
+                      <span class="mini-ic">⏱</span><span>2 days ago</span>
+                    </div>
+                  </div>
+                </div>
+
+                <a class="view" href="#">
+                  <span>View Details</span>
+                  <span class="ext">↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="load-wrap">
+            <button class="load-btn" type="button">Load More Alerts</button>
+          </div>
+        </section>
+      </div>
+    </main>
+
+   
+  </body>
+</html>

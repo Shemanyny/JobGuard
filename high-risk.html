@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JobGuard-high-risk</title>
+    <link rel="stylesheet" href="high-risk.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="nav">
+        <!-- Left -->
+        <a class="brand" href="#">
+          <img
+            src="https://i.postimg.cc/3W5Sx51Y/logo.jpg"
+            alt="JobGuard Logo"
+          />
+        </a>
+
+        <!-- Center -->
+        <nav class="nav-center" aria-label="Primary">
+          <a href="homepage.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="trends.html">Insight</a>
+        </nav>
+
+        <!-- Right -->
+        <div class="nav-right">
+          <a href="check-job.html" class="btn btn-outline">Check Job</a>
+          <a href="signup.html" class="btn btn-solid">Sign Up</a>
+        </div>
+
+        <!-- Mobile toggle -->
+        <input type="checkbox" id="menu" />
+        <label class="hamburger" for="menu" aria-label="Open menu">
+          <i></i>
+        </label>
+
+        <!-- Mobile dropdown -->
+        <div class="mobile-panel">
+          <div class="mobile-box">
+            <div class="mobile-links">
+              <a href="homepage.html">Home</a>
+              <a href="about.html">About Us</a>
+              <a href="trends.html">Insight</a>
+            </div>
+
+            <div class="mobile-actions">
+               <a href="check-job.html" class="btn btn-outline">Check Job</a>
+          <a href="signup.html" class="btn btn-solid">Sign Up</a> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--High risk job -Scam Signs Detected-->
+    <div class="result-wrap">
+      <div class="result-header">
+        <!-- SHIELD IMAGE (PICTURE FORMAT) -->
+        <div class="shield">
+          <img src="https://i.postimg.cc/SN6SzZdp/error-1.png" alt="Scam warning" />
+        </div>
+
+        <h1 class="title">Scam Signs Detected</h1>
+        <p class="sub">
+          The job posting shows possible signs of a scam.<br />Proceed with
+          caution.
+        </p>
+      </div>
+
+      <div class="result-card">
+        <div class="card-inner">
+          <div class="status-box">
+            <div class="status-text">
+              <ul>
+                <li>This job requires an upfront payment.</li>
+                <li>The company email uses a free, unverified domain.</li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="small-note">
+            For your safety, always investigate further and verify before
+            applying
+          </p>
+
+          <div class="stats">
+            <div class="stat-left">
+              <div class="percent">96%</div>
+              <div class="stat-label">Scam probability</div>
+            </div>
+
+            <button class="stat-right" type="button">Report this scam</button>
+          </div>
+
+          <a class="check-link" href="check-job.html">Check Another Job</a>
+
+          <div class="foot">
+            <span class="warn-tri"></span>
+            <span
+              >Please note: this result is Jobguard’s best estimate and does not
+              guarantee scam status</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

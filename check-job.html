@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JobGuard-check-job</title>
+    <link rel="stylesheet" href="check-job.css" />
+  </head>
+  <body>
+    <header>
+      <div class="nav">
+        <!-- Left -->
+        <a class="brand" href="#">
+          <img
+            src="https://i.postimg.cc/3W5Sx51Y/logo.jpg"
+            alt="JobGuard Logo"
+          />
+        </a>
+
+        <!-- Center -->
+        <nav class="nav-center" aria-label="Primary">
+          <a href="homepage.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="trends.html">Insight</a>
+        </nav>
+
+        <!-- Right -->
+        <div class="nav-right">
+          <a href="check-job.html" class="btn btn-outline">Check Job</a>
+          <a href="signup.html" class="btn btn-solid">Sign Up</a>
+        </div>
+
+        <!-- Mobile toggle -->
+        <input type="checkbox" id="menu" />
+        <label class="hamburger" for="menu" aria-label="Open menu">
+          <i></i>
+        </label>
+
+        <!-- Mobile dropdown -->
+        <div class="mobile-panel">
+          <div class="mobile-box">
+            <div class="mobile-links">
+              <a href="homepage.html">Home</a>
+              <a href="about.html">About Us</a>
+              <a href="trends.html">Insight</a>
+            </div>
+
+            <div class="mobile-actions">
+               <a href="check-job.html" class="btn btn-outline">Check Job</a>
+          <a href="signup.html" class="btn btn-solid">Sign Up</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO + CHECK JOB CARD (Navbar excluded) -->
+<section class="check-hero">
+  <div class="check-hero__inner">
+    <h1>
+      Spot fake jobs early.<br />
+      Apply with confidence.
+    </h1>
+
+    <p>
+      Paste a job link or description below and let Jobguard<br />
+      check for possible scam signs.
+    </p>
+  </div>
+</section>
+
+<section class="check-card-wrap">
+  <div class="check-card">
+    <div class="card-head">
+      <span class="doc-ic">📄</span>
+      <h2>Paste Job Link or Description</h2>
+    </div>
+
+    <!-- link / description input -->
+    <div class="link-row">
+      <span class="link-ic">🔗</span>
+      <input
+        type="text"
+        placeholder="Paste job links or job description here"
+        aria-label="Job link or description"
+      />
+      <button class="go" type="button" aria-label="Analyze link">➜</button>
+    </div>
+
+    <!-- upload area -->
+    <label class="upload" for="jobFile">
+      <input id="jobFile" type="file" accept=".pdf,.doc,.docx" />
+      <div class="upload-inner">
+        <div class="upload-ic">📄</div>
+        <div class="upload-text">
+          <strong>Upload Job File (PDF/DOC)</strong>
+          <span>Drag &amp; Drop or click to upload (Max 5MB)</span>
+        </div>
+      </div>
+    </label>
+
+    <!-- primary button -->
+    <button class="analyze" type="button">Analyze Job</button>
+
+    <p class="terms">
+      By uploading, you agree to Jobguard’s
+      <a href="#">Terms</a> and <a href="privacy-policy.html">Privacy Policy</a>.
+    </p>
+  </div>
+</section>
+  </body>
+</html>

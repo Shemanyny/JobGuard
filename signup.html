@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JobGuard – Sign Up</title>
+    <link rel="stylesheet" href="signup.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <header>
+      <div class="nav">
+        <!-- Left -->
+        <a class="brand" href="#">
+          <img
+            src="https://i.postimg.cc/3W5Sx51Y/logo.jpg"
+            alt="JobGuard Logo"
+          />
+        </a>
+
+        <!-- Center -->
+        <nav class="nav-center" aria-label="Primary">
+          <a href="homepage.html">Home</a>
+          <a href="about.html">About Us</a>
+        </nav>
+
+        <!-- Right -->
+        <div class="nav-right">
+          <a href="sign-in.html" class="btn btn-outline">Sign In</a>
+          <a href="signup.html" class="btn btn-solid">Sign Up</a>
+        </div>
+
+        <!-- Mobile toggle -->
+        <input type="checkbox" id="menu" />
+        <label class="hamburger" for="menu" aria-label="Open menu">
+          <i></i>
+        </label>
+
+        <!-- Mobile dropdown -->
+        <div class="mobile-panel">
+          <div class="mobile-box">
+            <div class="mobile-links">
+              <a href="homepage.html">Home</a>
+              <a href="about.html">About Us</a>
+            </div>
+
+            <div class="mobile-actions">
+              <a href="sign-in.html" class="btn btn-outline">Sign In</a>
+              <a href="signup.html" class="btn btn-solid">Sign Up</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Card -->
+    <main class="auth-wrapper">
+      <section class="auth-card">
+        <h1>Sign up to Check Job</h1>
+
+        <!-- OAuth buttons -->
+        <div class="oauth">
+          <button class="oauth-btn">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+              alt=""
+            />
+            Continue with apple
+          </button>
+
+          <button class="oauth-btn">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+              alt=""
+            />
+            Continue with google
+          </button>
+        </div>
+
+        <div class="divider">
+          <span></span>
+          <p>or</p>
+          <span></span>
+        </div>
+
+        <!-- Form -->
+        <form class="form">
+          <div class="row">
+            <div class="field">
+              <label>First name</label>
+              <input type="text" />
+            </div>
+
+            <div class="field">
+              <label>Last name</label>
+              <input type="text" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Email</label>
+            <input type="email" />
+          </div>
+
+          <div class="field password-field">
+            <label>Password</label>
+            <input type="password" />
+            <span class="eye">👁️</span>
+          </div>
+
+          <label class="terms">
+            <input type="checkbox" />
+            <span>
+              Yes, i understand and the agree to the
+              <a href="#">JobGuard Terms of service</a>. Including the
+              <a href="#">User Agreement</a> and <a href="#">Privacy Policy</a>.
+            </span>
+          </label>
+
+          <button class="submit">Create Account</button>
+        </form>
+
+        <p class="login">
+          Already have an account?
+          <a href="#">Log In</a>
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

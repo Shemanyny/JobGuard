@@ -1,0 +1,587 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  background: #ffffff;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================
+NAVBAR (DESKTOP)
+========================= */
+header {
+  height: 88px;
+  display: flex;
+  align-items: center;
+  padding: 0 40px; /* keeps logo close to left corner */
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  ;
+}
+.nav {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* left | center | right */
+  align-items: center;
+}
+
+/* Left: Logo */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  justify-self: start;
+}
+.brand img {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+}
+/*.brand span {
+  font-weight: 700;
+  font-size: 14px;
+  color: #1e3a8a;
+}*/
+
+/* Center: Links */
+.nav-center {
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  font-size: 16px;
+  font-weight: 400;
+}
+/* Right: Actions */
+.nav-right {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.btn {
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  font-weight: 600;
+  font-size: 16px;
+  background: transparent;
+}
+.btn-outline {
+  border-color: #d1d5db;
+  background: #fff;
+  color: #0f172a;
+}
+.btn-solid {
+  background: #1e3a8a;
+  color: #fff;
+  padding: 12px 20px;
+}
+/* =========================
+MOBILE MENU (HIDDEN BY DEFAULT)
+========================= */
+#menu {
+  display: none;
+}
+
+.hamburger {
+  display: none; /* shown on small screens */
+  width: 46px;
+  height: 46px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: #fff;
+  align-items: center;
+  justify-content: center;
+  justify-self: end;
+  cursor: pointer;
+}
+.hamburger i {
+  width: 20px;
+  height: 2px;
+  background: #0f172a;
+  position: relative;
+  display: block;
+}
+.hamburger i::before,
+.hamburger i::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  background: #0f172a;
+}
+.hamburger i::before {
+  top: -6px;
+}
+.hamburger i::after {
+  top: 6px;
+}
+.mobile-panel {
+  display: none;
+  width: 100%;
+  padding: 14px 0 0;
+  grid-column: 1 / -1;
+}
+
+.mobile-box {
+  border: 1px solid #eef2f7;
+  border-radius: 14px;
+  padding: 14px;
+  background: #fff;
+}
+
+.mobile-links {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 6px;
+  font-weight: 600;
+}
+
+.mobile-actions {
+  display: flex;
+  gap: 12px;
+  padding: 10px 6px 6px;
+}
+.mobile-actions .btn {
+  width: 100%;
+}
+
+/* checkbox toggle */
+#menu:checked ~ .mobile-panel {
+  display: block;
+}
+
+
+
+/* Wrapper */
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+/* Card */
+.auth-card {
+  width: 100%;
+  max-width: 720px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 40px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.12);
+}
+
+/* Heading */
+.auth-card h1 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+
+/* OAuth */
+.oauth {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.oauth-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.oauth-btn img {
+  width: 18px;
+}
+
+/* Divider */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 28px 0;
+}
+
+.divider span {
+  flex: 1;
+  height: 1px;
+  background: #e5e7eb;
+}
+
+.divider p {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.field label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.field input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+/* Password */
+.password-field {
+  position: relative;
+}
+
+.eye {
+  position: absolute;
+  right: 14px;
+  top: 42px;
+  font-size: 16px;
+  color: #6b7280;
+}
+
+/* Terms */
+.terms {
+  display: flex;
+  gap: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.terms a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+/* Button */
+.submit {
+  margin-top: 8px;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  background: #e5e7eb;
+  color: #6b7280;
+  font-size: 15px;
+  /*cursor: not-allowed;*/
+}
+
+/* Login */
+.login {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.login a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+/* =========================
+   Responsive (Desktop-first)
+   Start at 1280px and go down
+   ========================= */
+
+/* 1280px and below (large laptops) */
+/*navbar*/
+@media (max-width: 1280px) {
+  header {
+    padding: 0 32px;
+  }
+  .nav-center {
+    gap: 44px;
+  }
+}
+
+@media (max-width: 1024px) {
+  header {
+    padding: 0 24px;
+  }
+  .nav-center {
+    gap: 34px;
+  }
+  .btn {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    height: auto;
+    padding: 14px 16px;
+    align-items: flex-start;
+  }
+
+  .nav {
+    grid-template-columns: 1fr auto; /* logo | hamburger */
+    row-gap: 12px;
+  }
+
+  .nav-center,
+  .nav-right {
+    display: none; /* hide desktop center & right */
+  }
+
+  .hamburger {
+    display: inline-flex; /* show hamburger */
+  }
+}
+
+
+
+@media (max-width: 1280px) {
+   .top-logo img {
+    width: 60px;
+  }     
+  .auth-card {
+    max-width: 680px;
+    padding: 36px;
+  }
+
+  .auth-card h1 {
+    font-size: 30px;
+  }
+
+  .oauth-btn {
+    padding: 13px;
+    font-size: 14.5px;
+  }
+
+  .field input {
+    padding: 13px;
+  }
+
+  .submit {
+    padding: 13px;
+  }
+}
+
+/* 1024px and below (tablets landscape / small laptops) */
+@media (max-width: 1024px) {
+  .top-logo {
+    padding: 20px;
+  }
+
+  .top-logo img {
+    width: 100px;
+  }
+
+  .auth-wrapper {
+    padding: 32px 16px;
+  }
+
+  .auth-card {
+    max-width: 640px;
+    padding: 32px;
+  }
+
+  .auth-card h1 {
+    font-size: 28px;
+    margin-bottom: 26px;
+  }
+
+  .row {
+    gap: 16px;
+  }
+
+  .oauth {
+    gap: 14px;
+  }
+
+  .divider {
+    margin: 22px 0;
+  }
+}
+
+/* 768px and below (tablet portrait / large phones) */
+@media (max-width: 768px) {
+  
+   .top-logo img {
+    width: 20px;
+  } 
+
+ 
+  .auth-card {
+    max-width: 560px;
+    padding: 26px;
+    border-radius: 16px;
+  }
+
+  .auth-card h1 {
+    font-size: 24px;
+    margin-bottom: 22px;
+  }
+
+  /* Stack oauth buttons */
+  .oauth {
+    flex-direction: column;
+  }
+
+  /* Stack first/last name */
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .terms {
+    font-size: 13px;
+  }
+}
+
+/* 480px and below (phones) */
+@media (max-width: 480px) {
+  .top-logo {
+    padding: 16px;
+  }
+
+  .top-logo img {
+    width: 92px;
+  }
+
+  .auth-wrapper {
+    padding: 22px 12px;
+  }
+
+  .auth-card {
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .auth-card h1 {
+    font-size: 22px;
+  }
+
+  .oauth-btn {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .field label {
+    font-size: 13px;
+  }
+
+  .field input {
+    padding: 12px;
+  }
+
+  .eye {
+    top: 40px;
+    right: 12px;
+  }
+
+  .submit {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .login {
+    font-size: 13px;
+  }
+}
+
+/* 360px and below (small phones) */
+@media (max-width: 360px) {
+  .auth-card {
+    padding: 16px;
+  }
+
+  .auth-card h1 {
+    font-size: 20px;
+  }
+
+  .oauth-btn {
+    font-size: 13px;
+    gap: 10px;
+  }
+
+  .terms {
+    font-size: 12.5px;
+  }
+}
+
+/* 240px and below (smartwatch-class / ultra narrow) */
+@media (max-width: 240px) {
+  .top-logo img {
+    width: 78px;
+  }
+
+  .auth-card {
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .auth-card h1 {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .oauth-btn {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .oauth-btn img {
+    width: 14px;
+  }
+
+  .field label {
+    font-size: 12px;
+  }
+
+  .field input {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .terms {
+    font-size: 12px;
+  }
+
+  .submit {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .login {
+    font-size: 12px;
+  }
+}
+
+

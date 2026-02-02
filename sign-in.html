@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In</title>
+    <link rel="stylesheet" href="sign-in.css" />
+  </head>
+  <body>
+    <header>
+      <div class="nav">
+        <!-- Left -->
+        <a class="brand" href="#">
+          <img
+            src="https://i.postimg.cc/3W5Sx51Y/logo.jpg"
+            alt="JobGuard Logo"
+          />
+        </a>
+
+        <!-- Center -->
+        <nav class="nav-center" aria-label="Primary">
+          <a href="homepage.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="trends.html">Insight</a>
+        </nav>
+
+        <!-- Right -->
+        <div class="nav-right">
+          
+          <a href="sign-in.html" class="btn btn-solid">Login</a>
+        </div>
+
+        <!-- Mobile toggle -->
+        <input type="checkbox" id="menu" />
+        <label class="hamburger" for="menu" aria-label="Open menu">
+          <i></i>
+        </label>
+
+        <!-- Mobile dropdown -->
+        <div class="mobile-panel">
+          <div class="mobile-box">
+            <div class="mobile-links">
+              <a href="homepage.html">Home</a>
+              <a href="about.html">About Us</a>
+              <a href="trends.html">Insight</a>
+            </div>
+
+            <div class="mobile-actions">
+              <a href="sign-in.html" class="btn btn-solid">Sign In</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="page">
+      <div class="wrap">
+        <div class="card">
+          <div class="title">Log in to JobGuard</div>
+
+          <button class="google-btn" type="button">
+            <!-- simple Google mark (not an SVG file) -->
+            <img
+              class="gmark"
+              alt="Google"
+              src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Google_Favicon_2025.svg"
+            />
+            <span>Continue with google</span>
+          </button>
+
+          <div class="divider">or</div>
+
+          <div class="field">
+            <label class="label" for="email">Email</label>
+            <input class="input" id="email" type="email" autocomplete="email" />
+          </div>
+
+          <div class="field">
+            <label class="label" for="password">Password</label>
+            <input
+              class="input"
+              id="password"
+              type="password"
+              autocomplete="current-password"
+            />
+          </div>
+
+          <button class="primary" type="button">Continue</button>
+
+          <div class="bottom">
+            Don’t have an account yet? <a href="signup.html">Sign Up</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </body>
+</html>

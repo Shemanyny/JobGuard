@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jobguard-lean</title>
+    <link rel="stylesheet" href="learn.css" />
+  </head>
+  <body>
+    <header>
+      <div class="nav">
+        <!-- Left -->
+        <a class="brand" href="#">
+          <img
+            src="https://i.postimg.cc/3W5Sx51Y/logo.jpg"
+            alt="JobGuard Logo"
+          />
+        </a>
+
+        <!-- Center -->
+        <nav class="nav-center" aria-label="Primary">
+          <a href="homepage.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="alert.html">Insight</a>
+        </nav>
+
+        <!-- Right -->
+        <div class="nav-right">
+          <a href="check-job.html" class="btn btn-outline">Check Job</a>
+          <a href="signup.html" class="btn btn-solid">Sign Up</a>
+        </div>
+
+        <!-- Mobile toggle -->
+        <input type="checkbox" id="menu" />
+        <label class="hamburger" for="menu" aria-label="Open menu">
+          <i></i>
+        </label>
+
+        <!-- Mobile dropdown -->
+        <div class="mobile-panel">
+          <div class="mobile-box">
+            <div class="mobile-links">
+              <a href="homepage.html">Home</a>
+              <a href="about.html">About Us</a>
+              <a href="alert.html">Insight</a>
+            </div>
+
+            <div class="mobile-actions">
+               <a href="check-job.html" class="btn btn-outline">Check Job</a>
+          <a href="signup.html" class="btn btn-solid">Sign Up</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-badge">
+          <span class="badge-ic">↻</span>
+          <span>Real Time Insights</span>
+        </div>
+        <h1>Job Scam Insights &amp; Analytics</h1>
+        <p>
+          Stay informed with real-time trends, alerts, and educational resources
+          to protect yourself from job scams.
+        </p>
+      </div>
+    </section>
+
+    <main class="main">
+      <div class="container">
+        <div class="tabs-wrap">
+          <div class="tabs" id="tabs">
+            <a class="tab" href="trends.html" data-tab="trends">
+              <span class="tab-ic">▦</span>
+              <span>Trends</span>
+            </a>
+            <a class="tab" href="alert.html" data-tab="alerts">
+              <span class="tab-ic">!</span>
+              <span>Alerts</span>
+            </a>
+            <a class="tab active" href="learn.html" data-tab="learn">
+              <span class="tab-ic">📘</span>
+              <span>Learn</span>
+            </a>
+          </div>
+        </div>
+        <!-- QUICK SAFETY TIPS PANEL -->
+        <section class="panel">
+          <div class="panel-head">
+            <span class="head-ic">💡</span>
+            <span>Quick Safety Tips</span>
+          </div>
+
+          <div class="tips-grid">
+            <div class="tip-card">
+              <div class="tip-ic">✓</div>
+              <div class="tip-title">Research First</div>
+              <div class="tip-desc">
+                Always verify company details before applying
+              </div>
+            </div>
+
+            <div class="tip-card">
+              <div class="tip-ic">!</div>
+              <div class="tip-title">Trust Your Gut</div>
+              <div class="tip-desc">If something feels off, it probably is</div>
+            </div>
+
+            <div class="tip-card">
+              <div class="tip-ic">🛡</div>
+              <div class="tip-title">Protect Data</div>
+              <div class="tip-desc">Never share sensitive info upfront</div>
+            </div>
+
+            <div class="tip-card">
+              <div class="tip-ic">i</div>
+              <div class="tip-title">Stay Informed</div>
+              <div class="tip-desc">Keep up with latest scam tactics</div>
+            </div>
+          </div>
+        </section>
+        <!-- EDUCATIONAL RESOURCES PANEL -->
+        <section class="panel">
+          <div class="section-title">
+            <span class="sec-ic">📚</span>
+            <span>Educational Resources</span>
+          </div>
+
+          <div class="resources-grid">
+            <article class="resource">
+              <div class="resource-top">
+                <div class="resource-ic">!</div>
+                <div class="meta">
+                  <span class="tag">Detection</span>
+                  <span class="time">4 min read</span>
+                </div>
+              </div>
+              <h3>How to Identify Fake Job Postings</h3>
+              <p>
+                Learn the key warning signs that indicate a job posting might be
+                fraudulent.
+              </p>
+              <ul class="checks">
+                <li>
+                  <span class="ok">✓</span
+                  ><span
+                    >Vague job descriptions with no specific
+                    responsibilities</span
+                  >
+                </li>
+                <li>
+                  <span class="ok">✓</span
+                  ><span
+                    >Unrealistic salary offers for entry-level positions</span
+                  >
+                </li>
+              </ul>
+              <a class="read" href="#">Read Full Guide <span>→</span></a>
+            </article>
+
+            <article class="resource">
+              <div class="resource-top">
+                <div class="resource-ic">🛡</div>
+                <div class="meta">
+                  <span class="tag">Verification</span>
+                  <span class="time">7 min read</span>
+                </div>
+              </div>
+              <h3>Verifying Company Legitimacy</h3>
+              <p>
+                A step-by-step guide to researching and verifying whether a
+                company and job offer are legitimate.
+              </p>
+              <ul class="checks">
+                <li>
+                  <span class="ok">✓</span
+                  ><span>Search for the company on LinkedIn and Glassdoor</span>
+                </li>
+                <li>
+                  <span class="ok">✓</span
+                  ><span>Verify the domain age and website authenticity</span>
+                </li>
+              </ul>
+              <a class="read" href="#">Read Full Guide <span>→</span></a>
+            </article>
+
+            <article class="resource">
+              <div class="resource-top">
+                <div class="resource-ic">👤</div>
+                <div class="meta">
+                  <span class="tag">Safety</span>
+                  <span class="time">8 min read</span>
+                </div>
+              </div>
+              <h3>Protecting Your Personal Information</h3>
+              <p>
+                Best practices for safeguarding your personal and financial
+                information during the job application process.
+              </p>
+              <ul class="checks">
+                <li>
+                  <span class="ok">✓</span
+                  ><span
+                    >Never provide SSN or banking info before employment</span
+                  >
+                </li>
+                <li>
+                  <span class="ok">✓</span
+                  ><span>Use a separate email for job applications</span>
+                </li>
+              </ul>
+              <a class="read" href="#">Read Full Guide <span>→</span></a>
+            </article>
+
+            <article class="resource">
+              <div class="resource-top">
+                <div class="resource-ic">✉</div>
+                <div class="meta">
+                  <span class="tag">Phishing</span>
+                  <span class="time">9 min read</span>
+                </div>
+              </div>
+              <h3>Recognizing Phishing in Recruitment</h3>
+              <p>
+                How to spot phishing attempts disguised as legitimate job
+                opportunities or recruiter communications.
+              </p>
+              <ul class="checks">
+                <li>
+                  <span class="ok">✓</span
+                  ><span>Check email sender domains carefully</span>
+                </li>
+                <li>
+                  <span class="ok">✓</span
+                  ><span>Hover over links before clicking</span>
+                </li>
+              </ul>
+              <a class="read" href="#">Read Full Guide <span>→</span></a>
+            </article>
+          </div>
+        </section>
+        <!-- BOTTOM CTA -->
+        <section class="cta">
+          <div>
+            <h4>Spotted a Suspicious Job?</h4>
+            <p>
+              Help protect others by reporting fake job postings to our
+              database.
+            </p>
+          </div>
+
+          <a href="#">Report a Scam</a>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

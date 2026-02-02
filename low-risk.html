@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JobGuard- Risk Result</title>
+    <link rel="stylesheet" href="low-risk.css" />
+  </head>
+  <body>
+    <header>
+      <div class="nav">
+        <!-- Left -->
+        <a class="brand" href="#">
+          <img
+            src="https://i.postimg.cc/3W5Sx51Y/logo.jpg"
+            alt="JobGuard Logo"
+          />
+        </a>
+
+        <!-- Center -->
+        <nav class="nav-center" aria-label="Primary">
+          <a href="#">Home</a>
+          <a href="#">About Us</a>
+          <a href="#">Insight</a>
+        </nav>
+
+        <!-- Right -->
+        <div class="nav-right">
+          <a href="/about.html" class="btn btn-outline">Check Job</a>
+          <a href="/signup" class="btn btn-solid">Sign Up</a>
+        </div>
+
+        <!-- Mobile toggle -->
+        <input type="checkbox" id="menu" />
+        <label class="hamburger" for="menu" aria-label="Open menu">
+          <i></i>
+        </label>
+
+        <!-- Mobile dropdown -->
+        <div class="mobile-panel">
+          <div class="mobile-box">
+            <div class="mobile-links">
+              <a href="#">Home</a>
+              <a href="#">About Us</a>
+              <a href="#">Insight</a>
+            </div>
+
+            <div class="mobile-actions">
+              <a href="check-job.html" class="btn btn-outline">Check Job</a>
+              <a href="signup.html" class="btn btn-solid">Sign Up</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Scan Result Section -->
+    <div class="result-wrap">
+      <div class="result-header">
+        <!-- SHIELD IMAGE (PICTURE FORMAT) -->
+        <div class="shield">
+          <img src="https://i.postimg.cc/NGD66w4H/success-1.png" alt="Safe" />
+        </div>
+
+        <h1 class="title">No Major Scam Signs<br />Detected</h1>
+        <p class="sub">
+          The job posting looks safe based on our analysis.<br />Proceed with
+          caution.
+        </p>
+      </div>
+
+      <div class="result-card">
+        <div class="card-inner">
+          <div class="status-box">
+            <div class="status-icon">✓</div>
+            <div class="status-text">Safety Check Passed</div>
+          </div>
+
+          <div class="stats">
+            <div class="stat-left">
+              <div class="percent">2%</div>
+              <div class="stat-label">Scam probability</div>
+            </div>
+
+            <div class="stat-right">
+              <div class="big-num">0</div>
+              <div class="right-text">Warning signs<br />found</div>
+            </div>
+          </div>
+
+          <a class="check-link" href="check.html">Check Another Job</a>
+
+          <div class="foot">
+            <span class="warn-tri"></span>
+            <span
+              >Please note: this result is Jobguard’s best estimate and does not
+              guarantee scam status</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
