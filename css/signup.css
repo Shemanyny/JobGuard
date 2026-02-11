@@ -306,7 +306,7 @@ MOBILE MENU (HIDDEN BY DEFAULT)
   cursor: pointer;
 }
 .submit:hover {
-  background: #172f70; /* darker blue */
+  background: #040d25; /* darker blue */
   box-shadow: 0 8px 20px rgba(30, 58, 138, 0.25);
 }
 
