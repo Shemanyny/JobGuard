@@ -297,11 +297,16 @@ MOBILE MENU (HIDDEN BY DEFAULT)
   padding: 14px;
   border-radius: 10px;
   border: none;
-  background: #e5e7eb;
-  color: #6b7280;
+  background:#1e3a8a;
+  color:#fff;
+  cursor:pointer;
   font-size: 15px;
-  /*cursor: not-allowed;*/
+  cursor: pointer;
 }
+.submit:hover {
+  background: #172f70;   /* darker blue */
+  box-shadow: 0 8px 20px rgba(30, 58, 138, 0.25);
+}   
 
 /* Login */
 .login {
