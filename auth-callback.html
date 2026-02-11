@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processing Login...</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+        }
+        .loader {
+            text-align: center;
+        }
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .error {
+            color: #c33;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="loader">
+        <div class="spinner"></div>
+        <p>Completing secure sign in...</p>
+        <p class="error" id="error-msg" style="display: none;"></p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 1. Get token from URL query parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const token = urlParams.get('token');
+            const error = urlParams.get('error');
+
+            if (error) {
+                alert('Login failed: ' + error);
+                window.location.href = 'sign-in.html';
+                return;
+            }
+
+            if (token) {
+                try {
+                    // 2. Save token to localStorage using the CORRECT key
+                    localStorage.setItem('jobguard_token', token);
+                    
+                    // 3. Decode JWT token to extract user info
+                    const base64Url = token.split('.')[1];
+                    const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+                    const jsonPayload = decodeURIComponent(
+                        atob(base64).split('').map(function(c) {
+                            return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+                        }).join('')
+                    );
+                    
+                    const decodedToken = JSON.parse(jsonPayload);
+                    console.log('Decoded token:', decodedToken);
+                    
+                    // 4. Extract user info from token
+                    // The token payload structure may vary based on your backend
+                    // Common structures are: { id, firstName, lastName, email } or { user: {...} }
+                    let user = null;
+                    
+                    if (decodedToken.user) {
+                        // If user info is nested under 'user' property
+                        user = decodedToken.user;
+                    } else if (decodedToken.id || decodedToken._id) {
+                        // If user info is at root level
+                        user = {
+                            id: decodedToken.id || decodedToken._id,
+                            firstName: decodedToken.firstName || decodedToken.firstname || decodedToken.first_name,
+                            lastName: decodedToken.lastName || decodedToken.lastname || decodedToken.last_name,
+                            email: decodedToken.email
+                        };
+                    }
+                    
+                    // 5. Save user info to localStorage
+                    if (user && user.firstName) {
+                        localStorage.setItem('jobguard_user', JSON.stringify(user));
+                        console.log('User info saved:', user);
+                    } else {
+                        console.error('Unable to extract user info from token. Token payload:', decodedToken);
+                        // Still save what we have
+                        localStorage.setItem('jobguard_user', JSON.stringify(decodedToken));
+                    }
+                    
+                    // 6. Redirect to check-job page
+                    setTimeout(() => {
+                        window.location.href = 'check-job.html';
+                    }, 500);
+                    
+                } catch (e) {
+                    console.error('Error processing token:', e);
+                    document.getElementById('error-msg').textContent = 'Error processing login. Please try again.';
+                    document.getElementById('error-msg').style.display = 'block';
+                    
+                    // Still try to redirect after showing error
+                    setTimeout(() => {
+                        window.location.href = 'sign-in.html';
+                    }, 3000);
+                }
+            } else {
+                // No token found
+                console.error('No token in URL');
+                window.location.href = 'sign-in.html';
+            }
+        });
+    </script>
+</body>
+</html>

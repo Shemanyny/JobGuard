@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JobGuard-about</title>
-  <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="/css/about.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -172,7 +172,7 @@
         <h4>Product</h4>
         <a href="check-job.html">Check a Job</a>
         <a href="homepage.html">How it Works</a>
-        <a href="homepage.html">What we check</a>
+        <a href="#">What we check</a>
         <a href="#">Sample Report</a>
       </div>
 
@@ -207,7 +207,14 @@
     </div>
   </div>
  </footer>
-
+<script src="/js/config.js"></script>
+<script src="/js/api.js"></script>
+<script>
+  // Update auth UI on page load
+  document.addEventListener('DOMContentLoaded', function() {
+    updateAuthUI();
+  });
+</script>
 </body>
 </html>
 
