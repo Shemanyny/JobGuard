@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Policy - JobGuard</title>
+    <link rel="stylesheet" href="/css/about.css">
+    <style>
+        .policy-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .policy-section {
+            margin: 30px 0;
+            padding: 15px;
+            background: #f9f9f9;
+            border-left: 4px solid #007bff;
+        }
+        h2 {
+            color: #333;
+            margin-top: 30px;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <a class="brand" href="/">
+                <img src="https://i.postimg.cc/3W5Sx51Y/logo.jpg" alt="JobGuard Logo">
+            </a>
+            <nav class="nav-center" aria-label="Primary">
+                <a href="/homepage.html">Home</a>
+                <a href="/about.html">About Us</a>
+                <a href="/trends.html">Insight</a>
+            </nav>
+            <div class="nav-right">
+                <a href="/sign-in.html" class="btn btn-outline">Sign In</a>
+                <a href="/signup.html" class="btn btn-solid">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="policy-container">
+        <h1>Security Policy</h1>
+
+        <div class="policy-section">
+            <h2>Our Commitment to Security</h2>
+            <p>
+                JobGuard is committed to protecting user data and maintaining a secure platform. 
+                We implement industry-standard security practices to ensure the safety and privacy 
+                of our users.
+            </p>
+        </div>
+
+        <div class="policy-section">
+            <h2>Data Protection</h2>
+            <p>
+                <strong>What We Collect:</strong> UserFirst name, last name, email address, and password (hashed and salted)
+                <ul>
+                    <li>Job listing data for analysis</li>
+                    <li>Job risk assessment results</li>
+                </ul>
+            </p>
+            <p>
+                <strong>How We Protect It:</strong>
+                <ul>
+                    <li>All data transmitted via HTTPS/TLS encryption</li>
+                    <li>Passwords hashed using industry-standard algorithms</li>
+                    <li>Regular security audits and updates</li>
+                    <li>Compliance with data protection best practices</li>
+                </ul>
+            </p>
+        </div>
+
+        <div class="policy-section">
+            <h2>Authentication & Authorization</h2>
+            <p>
+                We use secure OAuth 2.0 authentication with Google. Tokens are:
+                <ul>
+                    <li>Validated on every request</li>
+                    <li>Stored securely in browser localStorage</li>
+                    <li>Never logged or exposed in URLs (except during OAuth redirect)</li>
+                    <li>Automatically cleared on logout</li>
+                </ul>
+            </p>
+        </div>
+
+        <div class="policy-section">
+            <h2>Content Security</h2>
+            <p>
+                <strong>What We Do NOT Do:</strong>
+                <ul>
+                    <li>Store login credentials in plain text</li>
+                    <li>Share user data with third parties</li>
+                    <li>Display misleading or deceptive content</li>
+                    <li>Perform phishing or social engineering attacks</li>
+                    <li>Inject malicious scripts or malware</li>
+                </ul>
+            </p>
+        </div>
+
+        <div class="policy-section">
+            <h2>Browser Security</h2>
+            <p>
+                We implement the following security headers:
+                <ul>
+                    <li><code>X-Content-Type-Options: nosniff</code> - Prevents MIME type sniffing</li>
+                    <li><code>X-Frame-Options: SAMEORIGIN</code> - Prevents clickjacking</li>
+                    <li><code>X-XSS-Protection</code> - Enables XSS protection</li>
+                    <li><code>Strict-Transport-Security</code> - Enforces HTTPS</li>
+                </ul>
+            </p>
+        </div>
+
+        <div class="policy-section">
+            <h2>Transparency</h2>
+            <p>
+                <strong>Our Purpose:</strong> JobGuard helps users identify suspicious job opportunities 
+                and potential employment scams by analyzing job listings for red flags.
+            </p>
+            <p>
+                <strong>How It Works:</strong>
+                <ul>
+                    <li>Users input job description or URL</li>
+                    <li>Our system analyzes for common scam indicators</li>
+                    <li>Results displayed with detailed reasoning</li>
+                    <li>No data is shared or sold</li>
+                </ul>
+            </p>
+        </div>
+
+        <div class="policy-section">
+            <h2>Reporting Security Issues</h2>
+            <p>
+                If you discover a security vulnerability, please report it responsibly to our security team.
+                Do not publicly disclose vulnerabilities before we have a chance to fix them.
+            </p>
+        </div>
+
+        <div class="policy-section">
+            <h2>Updates to This Policy</h2>
+            <p>
+                We may update this security policy from time to time. 
+                Changes will be posted on this page with an updated date.
+            </p>
+            <p><strong>Last Updated:</strong> May 14, 2026</p>
+        </div>
+    </div>
+
+    <footer style="text-align: center; padding: 30px; margin-top: 50px; border-top: 1px solid #ddd;">
+        <p>&copy; 2026 JobGuard. All rights reserved.</p>
+        <p>
+            <a href="/privacy-policy.html">Privacy Policy</a> | 
+            <a href="/security-policy.html">Security Policy</a> | 
+            <a href="/about.html">About Us</a>
+        </p>
+    </footer>
+</body>
+</html>

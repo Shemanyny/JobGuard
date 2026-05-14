@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /auth-callback.html
+Disallow: /js/
+Disallow: /css/
+
+# Google-specific
+User-agent: Googlebot
+Allow: /
+
+# Sitemap
+Sitemap: https://jobguard.com/sitemap.xml
